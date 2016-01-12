@@ -36,17 +36,7 @@ function shanti_collections_default_page_manager_handlers() {
   margin-right: 1rem;
 }',
     'contexts' => array(),
-    'relationships' => array(
-      0 => array(
-        'identifier' => 'OG membership from a group node and user',
-        'keyword' => 'og_membership',
-        'name' => 'og_membership_from_group_and_user',
-        'context' => array(
-          0 => 'argument_entity_id:node_1',
-        ),
-        'id' => 1,
-      ),
-    ),
+    'relationships' => array(),
     'name' => '',
     'access' => array(
       'plugins' => array(

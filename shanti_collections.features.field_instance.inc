@@ -471,7 +471,7 @@ function shanti_collections_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'group_access',
     'label' => 'Group visibility',
-    'required' => TRUE,
+    'required' => 1,
     'settings' => array(
       'user_register_form' => FALSE,
     ),
@@ -486,6 +486,7 @@ function shanti_collections_field_default_field_instances() {
       ),
     ),
     'widget' => array(
+      'active' => 1,
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',

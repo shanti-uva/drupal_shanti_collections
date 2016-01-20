@@ -45,13 +45,10 @@ function shanti_collections_field_default_field_bases() {
         ),
         'membership_type' => 'og_membership_type_default',
         'sort' => array(
-          'direction' => 'ASC',
-          'property' => 'title',
           'type' => 'none',
         ),
         'target_bundles' => array(
-          'collection' => 'collection',
-          'subcollection' => 'subcollection',
+          'group' => 'group',
         ),
       ),
       'target_type' => 'node',

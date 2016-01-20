@@ -247,7 +247,7 @@ a.shanti-collections-create-link {
 <a class="btn btn-primary shanti-collections-create-link" href="/node/add/book?field_og_collection_ref=%node:nid">Create new text</a>
 <?php endif; ?>
 <?php if (user_access(\'edit create collection content\') && $node->type == \'collection\'): ?>
-<a class="btn btn-primary shanti-collections-create-link" href="/node/add/book?field_og_parent_collection_ref=%node:nid">Create new Subcollection</a>
+<a class="btn btn-primary shanti-collections-create-link" href="/node/add/subcollection?field_og_parent_collection_ref=%node:nid">Create new Subcollection</a>
 <?php endif; ?>',
       'format' => 'php_code',
       'substitute' => 1,

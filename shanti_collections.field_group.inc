@@ -13,18 +13,19 @@ function shanti_collections_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
-  $field_group->identifier = 'group_collection|node|book|form';
+  $field_group->identifier = 'group_collection|node|subcollection|form';
   $field_group->group_name = 'group_collection';
   $field_group->entity_type = 'node';
-  $field_group->bundle = 'book';
+  $field_group->bundle = 'subcollection';
   $field_group->mode = 'form';
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Collection',
-    'weight' => '4',
+    'weight' => '8',
     'children' => array(
-      0 => 'field_og_collection_ref',
-      1 => 'group_content_access',
+      0 => 'group_group',
+      1 => 'field_og_parent_collection_ref',
+      2 => 'group_access',
     ),
     'format_type' => 'tab',
     'format_settings' => array(
@@ -36,34 +37,35 @@ function shanti_collections_field_group_info() {
       ),
     ),
   );
-  $export['group_collection|node|book|form'] = $field_group;
+  $export['group_collection|node|subcollection|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
-  $field_group->identifier = 'group_collection|node|text|form';
-  $field_group->group_name = 'group_collection';
+  $field_group->identifier = 'group_content|node|subcollection|form';
+  $field_group->group_name = 'group_content';
   $field_group->entity_type = 'node';
-  $field_group->bundle = 'text';
+  $field_group->bundle = 'subcollection';
   $field_group->mode = 'form';
   $field_group->parent_name = '';
   $field_group->data = array(
-    'label' => 'Collection',
-    'weight' => '7',
+    'label' => 'Content',
+    'weight' => '8',
     'children' => array(
-      0 => 'field_og_collection_ref',
+      0 => 'body',
+      1 => 'field_general_featured_image',
     ),
     'format_type' => 'tab',
     'format_settings' => array(
       'formatter' => 'closed',
       'instance_settings' => array(
         'description' => '',
-        'classes' => '',
+        'classes' => 'group-content field-group-tab',
         'required_fields' => 1,
       ),
     ),
   );
-  $export['group_collection|node|text|form'] = $field_group;
+  $export['group_content|node|subcollection|form'] = $field_group;
 
   return $export;
 }

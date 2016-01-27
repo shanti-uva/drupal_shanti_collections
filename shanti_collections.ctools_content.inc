@@ -35,8 +35,10 @@ foreach ($v1->result as $item) {
 $arg_str = implode(",",$args);
 
 // Pass the argument to the texts view
+// REPLACE all_texts and panel_pane_2 with your own view and display
+// MAKE SURE your view accepts multiple arguments!
 $v2 = views_embed_view(\'all_texts\',\'panel_pane_2\',$arg_str);
-print($v2)
+print($v2);
 ?>',
     'format' => 'php_code',
     'substitute' => 0,

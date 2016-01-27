@@ -128,34 +128,18 @@ a.shanti-collections-create-link {
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
-    $pane->pid = 'new-b9687f8a-205f-4bb2-ac23-8fcbc7f9ff5b';
+    $pane->pid = 'new-4a8dd07e-86c1-4e8a-9008-33c47862db9d';
     $pane->panel = 'bottom';
     $pane->type = 'php';
-    $pane->subtype = 'php';
+    $pane->subtype = 'view_collections_content';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'admin_title' => 'View of Combined Collections and Subcollections Content',
+      'admin_title' => '',
       'title' => '',
-      'body' => '<?php
-
-// Get subcollections associated with the current collection
-$args = array($node->nid);
-$v1 = views_get_view(\'collections\');
-$v1->set_display(\'views_data_export_1\');
-$v1->set_arguments(array($node->nid));
-$v1->pre_execute();
-$v1->execute();
-foreach ($v1->result as $item) {
-  $args[] = $item->nid;
-}
-$arg_str = implode(",",$args);
-
-// Pass the argument to the texts view
-$v2 = views_embed_view(\'all_texts\',\'panel_pane_2\',$arg_str);
-print($v2);
-
-?>',
+      'body' => '<h4>Example PHP code</h4>
+<p>Time: <?php print date(\'H:i\', time());?></p>
+',
     );
     $pane->cache = array();
     $pane->style = array(
@@ -165,9 +149,9 @@ print($v2);
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $pane->uuid = 'b9687f8a-205f-4bb2-ac23-8fcbc7f9ff5b';
-    $display->content['new-b9687f8a-205f-4bb2-ac23-8fcbc7f9ff5b'] = $pane;
-    $display->panels['bottom'][0] = 'new-b9687f8a-205f-4bb2-ac23-8fcbc7f9ff5b';
+    $pane->uuid = '4a8dd07e-86c1-4e8a-9008-33c47862db9d';
+    $display->content['new-4a8dd07e-86c1-4e8a-9008-33c47862db9d'] = $pane;
+    $display->panels['bottom'][0] = 'new-4a8dd07e-86c1-4e8a-9008-33c47862db9d';
     $pane = new stdClass();
     $pane->pid = 'new-77299824-f4ba-49de-9e84-f217a8627592';
     $pane->panel = 'left';

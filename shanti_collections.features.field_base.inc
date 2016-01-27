@@ -10,21 +10,13 @@
 function shanti_collections_field_default_field_bases() {
   $field_bases = array();
 
-  // Exported field_base: 'field_og_collection_ref'
+  // Exported field_base: 'field_og_collection_ref'.
   $field_bases['field_og_collection_ref'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_og_collection_ref',
-    'foreign keys' => array(
-      'node' => array(
-        'columns' => array(
-          'target_id' => 'nid',
-        ),
-        'table' => 'node',
-      ),
-    ),
     'indexes' => array(
       'target_id' => array(
         0 => 'target_id',
@@ -48,7 +40,8 @@ function shanti_collections_field_default_field_bases() {
           'type' => 'none',
         ),
         'target_bundles' => array(
-          'group' => 'group',
+          'collection' => 'collection',
+          'subcollection' => 'subcollection',
         ),
       ),
       'target_type' => 'node',
@@ -57,21 +50,13 @@ function shanti_collections_field_default_field_bases() {
     'type' => 'entityreference',
   );
 
-  // Exported field_base: 'field_og_parent_collection_ref'
+  // Exported field_base: 'field_og_parent_collection_ref'.
   $field_bases['field_og_parent_collection_ref'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_og_parent_collection_ref',
-    'foreign keys' => array(
-      'node' => array(
-        'columns' => array(
-          'target_id' => 'nid',
-        ),
-        'table' => 'node',
-      ),
-    ),
     'indexes' => array(
       'target_id' => array(
         0 => 'target_id',
@@ -106,14 +91,13 @@ function shanti_collections_field_default_field_bases() {
     'type' => 'entityreference',
   );
 
-  // Exported field_base: 'group_access'
+  // Exported field_base: 'group_access'.
   $field_bases['group_access'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'group_access',
-    'foreign keys' => array(),
     'indexes' => array(
       'value' => array(
         0 => 'value',
@@ -133,14 +117,13 @@ function shanti_collections_field_default_field_bases() {
     'type' => 'list_boolean',
   );
 
-  // Exported field_base: 'group_content_access'
+  // Exported field_base: 'group_content_access'.
   $field_bases['group_content_access'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'group_content_access',
-    'foreign keys' => array(),
     'indexes' => array(
       'value' => array(
         0 => 'value',
@@ -161,14 +144,13 @@ function shanti_collections_field_default_field_bases() {
     'type' => 'list_integer',
   );
 
-  // Exported field_base: 'group_group'
+  // Exported field_base: 'group_group'.
   $field_bases['group_group'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'group_group',
-    'foreign keys' => array(),
     'indexes' => array(
       'value' => array(
         0 => 'value',
@@ -187,7 +169,7 @@ function shanti_collections_field_default_field_bases() {
     'type' => 'list_boolean',
   );
 
-  // Exported field_base: 'og_membership_request'
+  // Exported field_base: 'og_membership_request'.
   $field_bases['og_membership_request'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -196,14 +178,6 @@ function shanti_collections_field_default_field_bases() {
       0 => 'og_membership',
     ),
     'field_name' => 'og_membership_request',
-    'foreign keys' => array(
-      'format' => array(
-        'columns' => array(
-          'format' => 'format',
-        ),
-        'table' => 'filter_format',
-      ),
-    ),
     'indexes' => array(
       'format' => array(
         0 => 'format',
@@ -216,21 +190,13 @@ function shanti_collections_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'og_user_node'
+  // Exported field_base: 'og_user_node'.
   $field_bases['og_user_node'] = array(
     'active' => 1,
     'cardinality' => -1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'og_user_node',
-    'foreign keys' => array(
-      'node' => array(
-        'columns' => array(
-          'target_id' => 'nid',
-        ),
-        'table' => 'node',
-      ),
-    ),
     'indexes' => array(
       'target_id' => array(
         0 => 'target_id',

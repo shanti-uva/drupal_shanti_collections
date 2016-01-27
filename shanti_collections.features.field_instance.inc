@@ -10,7 +10,7 @@
 function shanti_collections_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'node-collection-body'
+  // Exported field_instance: 'node-collection-body'.
   $field_instances['node-collection-body'] = array(
     'bundle' => 'collection',
     'default_value' => NULL,
@@ -83,7 +83,7 @@ function shanti_collections_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-collection-field_general_featured_image'
+  // Exported field_instance: 'node-collection-field_general_featured_image'.
   $field_instances['node-collection-field_general_featured_image'] = array(
     'bundle' => 'collection',
     'deleted' => 0,
@@ -155,7 +155,7 @@ function shanti_collections_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-collection-group_access'
+  // Exported field_instance: 'node-collection-group_access'.
   $field_instances['node-collection-group_access'] = array(
     'bundle' => 'collection',
     'default_value' => array(
@@ -206,7 +206,7 @@ function shanti_collections_field_default_field_instances() {
     'widget_type' => 'options_select',
   );
 
-  // Exported field_instance: 'node-collection-group_group'
+  // Exported field_instance: 'node-collection-group_group'.
   $field_instances['node-collection-group_group'] = array(
     'bundle' => 'collection',
     'default_value' => array(
@@ -264,7 +264,7 @@ function shanti_collections_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-subcollection-body'
+  // Exported field_instance: 'node-subcollection-body'.
   $field_instances['node-subcollection-body'] = array(
     'bundle' => 'subcollection',
     'default_value' => NULL,
@@ -305,7 +305,7 @@ function shanti_collections_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-subcollection-field_general_featured_image'
+  // Exported field_instance: 'node-subcollection-field_general_featured_image'.
   $field_instances['node-subcollection-field_general_featured_image'] = array(
     'bundle' => 'subcollection',
     'deleted' => 0,
@@ -377,7 +377,8 @@ function shanti_collections_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-subcollection-field_og_parent_collection_ref'
+  // Exported field_instance:
+  // 'node-subcollection-field_og_parent_collection_ref'.
   $field_instances['node-subcollection-field_og_parent_collection_ref'] = array(
     'bundle' => 'subcollection',
     'default_value' => NULL,
@@ -443,7 +444,7 @@ function shanti_collections_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-subcollection-group_access'
+  // Exported field_instance: 'node-subcollection-group_access'.
   $field_instances['node-subcollection-group_access'] = array(
     'bundle' => 'subcollection',
     'default_value' => array(
@@ -495,7 +496,7 @@ function shanti_collections_field_default_field_instances() {
     'widget_type' => 'options_select',
   );
 
-  // Exported field_instance: 'node-subcollection-group_group'
+  // Exported field_instance: 'node-subcollection-group_group'.
   $field_instances['node-subcollection-group_group'] = array(
     'bundle' => 'subcollection',
     'default_value' => array(
@@ -550,7 +551,8 @@ function shanti_collections_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'og_membership-og_membership_type_default-og_membership_request'
+  // Exported field_instance:
+  // 'og_membership-og_membership_type_default-og_membership_request'.
   $field_instances['og_membership-og_membership_type_default-og_membership_request'] = array(
     'bundle' => 'og_membership_type_default',
     'default_value' => NULL,
@@ -583,7 +585,7 @@ function shanti_collections_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'user-user-og_user_node'
+  // Exported field_instance: 'user-user-og_user_node'.
   $field_instances['user-user-og_user_node'] = array(
     'bundle' => 'user',
     'default_value' => NULL,

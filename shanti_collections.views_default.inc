@@ -156,6 +156,7 @@ function shanti_collections_views_default_views() {
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
+  $handler->display->display_options['query']['options']['distinct'] = TRUE;
   $handler->display->display_options['exposed_form']['type'] = 'basic';
   $handler->display->display_options['pager']['type'] = 'pagerer';
   $handler->display->display_options['pager']['options']['items_per_page'] = '36';
@@ -224,14 +225,6 @@ function shanti_collections_views_default_views() {
   $handler->display->display_options['fields']['created']['date_format'] = 'custom';
   $handler->display->display_options['fields']['created']['custom_date_format'] = 'F Y';
   $handler->display->display_options['fields']['created']['second_date_format'] = 'long';
-  /* Field: User: Name */
-  $handler->display->display_options['fields']['name']['id'] = 'name';
-  $handler->display->display_options['fields']['name']['table'] = 'users';
-  $handler->display->display_options['fields']['name']['field'] = 'name';
-  $handler->display->display_options['fields']['name']['relationship'] = 'og_membership_related_user';
-  $handler->display->display_options['fields']['name']['label'] = '';
-  $handler->display->display_options['fields']['name']['element_class'] = 'shanti-thumbnail-field clearfix shanti-field-agent';
-  $handler->display->display_options['fields']['name']['element_label_colon'] = FALSE;
   /* Sort criterion: Content: Title */
   $handler->display->display_options['sorts']['title']['id'] = 'title';
   $handler->display->display_options['sorts']['title']['table'] = 'node';
@@ -251,19 +244,12 @@ function shanti_collections_views_default_views() {
     'collection' => 'collection',
   );
   $handler->display->display_options['filters']['type']['group'] = 1;
-  /* Filter criterion: User: Roles */
-  $handler->display->display_options['filters']['rid']['id'] = 'rid';
-  $handler->display->display_options['filters']['rid']['table'] = 'users_roles';
-  $handler->display->display_options['filters']['rid']['field'] = 'rid';
-  $handler->display->display_options['filters']['rid']['relationship'] = 'og_membership_related_user';
-  $handler->display->display_options['filters']['rid']['value'] = array(
-    3 => '3',
-  );
   /* Filter criterion: Content: Title */
   $handler->display->display_options['filters']['title']['id'] = 'title';
   $handler->display->display_options['filters']['title']['table'] = 'node';
   $handler->display->display_options['filters']['title']['field'] = 'title';
   $handler->display->display_options['filters']['title']['operator'] = 'contains';
+  $handler->display->display_options['filters']['title']['group'] = 1;
   $handler->display->display_options['filters']['title']['exposed'] = TRUE;
   $handler->display->display_options['filters']['title']['expose']['operator_id'] = 'title_op';
   $handler->display->display_options['filters']['title']['expose']['operator'] = 'title_op';
@@ -349,14 +335,6 @@ function shanti_collections_views_default_views() {
     'subcollection' => 'subcollection',
   );
   $handler->display->display_options['filters']['type']['group'] = 1;
-  /* Filter criterion: User: Roles */
-  $handler->display->display_options['filters']['rid']['id'] = 'rid';
-  $handler->display->display_options['filters']['rid']['table'] = 'users_roles';
-  $handler->display->display_options['filters']['rid']['field'] = 'rid';
-  $handler->display->display_options['filters']['rid']['relationship'] = 'og_membership_related_user';
-  $handler->display->display_options['filters']['rid']['value'] = array(
-    3 => '3',
-  );
   $handler->display->display_options['pane_title'] = 'Subcollections of Collection';
   $handler->display->display_options['pane_category']['name'] = 'SHANTI';
   $handler->display->display_options['pane_category']['weight'] = '0';
@@ -379,6 +357,49 @@ function shanti_collections_views_default_views() {
       'label' => 'Content: Parent Collection (field_og_parent_collection_ref)',
     ),
   );
+
+  /* Display: Subcollections Data */
+  $handler = $view->new_display('views_data_export', 'Subcollections Data', 'views_data_export_1');
+  $handler->display->display_options['display_description'] = 'A raw list of subcollection IDs';
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['style_plugin'] = 'views_data_export_txt';
+  $handler->display->display_options['style_options']['provide_file'] = 0;
+  $handler->display->display_options['style_options']['parent_sort'] = 0;
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: Nid */
+  $handler->display->display_options['fields']['nid']['id'] = 'nid';
+  $handler->display->display_options['fields']['nid']['table'] = 'node';
+  $handler->display->display_options['fields']['nid']['field'] = 'nid';
+  $handler->display->display_options['fields']['nid']['label'] = '';
+  $handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  /* Contextual filter: Content: Parent Collection (field_og_parent_collection_ref) */
+  $handler->display->display_options['arguments']['field_og_parent_collection_ref_target_id']['id'] = 'field_og_parent_collection_ref_target_id';
+  $handler->display->display_options['arguments']['field_og_parent_collection_ref_target_id']['table'] = 'og_membership';
+  $handler->display->display_options['arguments']['field_og_parent_collection_ref_target_id']['field'] = 'field_og_parent_collection_ref_target_id';
+  $handler->display->display_options['arguments']['field_og_parent_collection_ref_target_id']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['field_og_parent_collection_ref_target_id']['default_argument_type'] = 'node';
+  $handler->display->display_options['arguments']['field_og_parent_collection_ref_target_id']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['field_og_parent_collection_ref_target_id']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['field_og_parent_collection_ref_target_id']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'subcollection' => 'subcollection',
+  );
+  $handler->display->display_options['filters']['type']['group'] = 1;
+  $handler->display->display_options['path'] = 'data/subcollections';
   $export['collections'] = $view;
 
   return $export;

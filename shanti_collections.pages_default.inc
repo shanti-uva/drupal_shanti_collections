@@ -128,30 +128,19 @@ a.shanti-collections-create-link {
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
-    $pane->pid = 'new-b295d2b8-7207-4d73-b855-ca4d8754704b';
+    $pane->pid = 'new-cecef72b-29e3-4e55-b0ce-dcfce51bcd88';
     $pane->panel = 'bottom';
-    $pane->type = 'views_panes';
-    $pane->subtype = 'all_texts-panel_pane_2';
+    $pane->type = 'php';
+    $pane->subtype = 'php';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'use_pager' => 1,
-      'pager_id' => '0',
-      'items_per_page' => '36',
-      'context' => array(
-        0 => 'argument_entity_id:node_1',
-      ),
-      'override_title' => 1,
-      'override_title_text' => '',
-      'override_title_heading' => 'span',
-      'fields_override' => array(
-        'title' => 1,
-        'field_book_author' => 1,
-        'field_dc_date_orginial_year' => 0,
-        'field_dc_date_publication_year' => 1,
-        'field_dc_description' => 1,
-        'title_1' => 0,
-      ),
+      'admin_title' => '',
+      'title' => '',
+      'body' => '<h4>Example PHP code</h4>
+<p>Time: <?php print date(\'H:i\', time());?></p>
+',
+      'name' => 'view_collections_content_php',
     );
     $pane->cache = array();
     $pane->style = array(
@@ -161,9 +150,9 @@ a.shanti-collections-create-link {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $pane->uuid = 'b295d2b8-7207-4d73-b855-ca4d8754704b';
-    $display->content['new-b295d2b8-7207-4d73-b855-ca4d8754704b'] = $pane;
-    $display->panels['bottom'][0] = 'new-b295d2b8-7207-4d73-b855-ca4d8754704b';
+    $pane->uuid = 'cecef72b-29e3-4e55-b0ce-dcfce51bcd88';
+    $display->content['new-cecef72b-29e3-4e55-b0ce-dcfce51bcd88'] = $pane;
+    $display->panels['bottom'][0] = 'new-cecef72b-29e3-4e55-b0ce-dcfce51bcd88';
     $pane = new stdClass();
     $pane->pid = 'new-77299824-f4ba-49de-9e84-f217a8627592';
     $pane->panel = 'left';
@@ -247,7 +236,7 @@ $node = node_load($nid);
 <?php if (user_access(\'create new books\')): ?>
 <a class="btn btn-primary shanti-collections-create-link" href="/node/add/book?field_og_collection_ref=%node:nid">Create new text</a>
 <?php endif; ?>
-<?php if (user_access(\'edit create collection content\') && $node->type == \'collection\'): ?>
+<?php if (user_access(\'create subcollection content\') && $node->type == \'collection\'): ?>
 <a class="btn btn-primary shanti-collections-create-link" href="/node/add/subcollection?field_og_parent_collection_ref=%node:nid">Create new Subcollection</a>
 <?php endif; ?>
 ',
@@ -363,68 +352,6 @@ $node = node_load($nid);
     $pane->uuid = '7005d8fc-eac9-44b2-9015-3db2ccd79812';
     $display->content['new-7005d8fc-eac9-44b2-9015-3db2ccd79812'] = $pane;
     $display->panels['right'][3] = 'new-7005d8fc-eac9-44b2-9015-3db2ccd79812';
-    $pane = new stdClass();
-    $pane->pid = 'new-02612246-2e25-4a0f-839c-0d9edbffad40';
-    $pane->panel = 'right';
-    $pane->type = 'node_create_links';
-    $pane->subtype = 'node_create_links';
-    $pane->shown = FALSE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'types' => array(
-        'book' => 'book',
-      ),
-      'field_name' => 'field_og_collection_ref',
-      'context' => 'argument_entity_id:node_1',
-      'override_title' => 1,
-      'override_title_text' => '',
-      'override_title_heading' => 'span',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array(
-      'css_id' => '',
-      'css_class' => 'shanti-collections-create-link',
-    );
-    $pane->extras = array();
-    $pane->position = 4;
-    $pane->locks = array();
-    $pane->uuid = '02612246-2e25-4a0f-839c-0d9edbffad40';
-    $display->content['new-02612246-2e25-4a0f-839c-0d9edbffad40'] = $pane;
-    $display->panels['right'][4] = 'new-02612246-2e25-4a0f-839c-0d9edbffad40';
-    $pane = new stdClass();
-    $pane->pid = 'new-18e28ee9-f586-41a0-80eb-11d6cfed3180';
-    $pane->panel = 'right';
-    $pane->type = 'node_create_links';
-    $pane->subtype = 'node_create_links';
-    $pane->shown = FALSE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'types' => array(
-        'subcollection' => 'subcollection',
-      ),
-      'field_name' => 'field_og_parent_collection_ref',
-      'context' => 'argument_entity_id:node_1',
-      'override_title' => 1,
-      'override_title_text' => '',
-      'override_title_heading' => 'span',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array(
-      'css_id' => '',
-      'css_class' => 'shanti-collections-create-link',
-    );
-    $pane->extras = array();
-    $pane->position = 5;
-    $pane->locks = array();
-    $pane->uuid = '18e28ee9-f586-41a0-80eb-11d6cfed3180';
-    $display->content['new-18e28ee9-f586-41a0-80eb-11d6cfed3180'] = $pane;
-    $display->panels['right'][5] = 'new-18e28ee9-f586-41a0-80eb-11d6cfed3180';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;

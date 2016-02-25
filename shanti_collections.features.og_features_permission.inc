@@ -40,6 +40,11 @@ function shanti_collections_og_features_default_permissions() {
     ),
   );
 
+  // Exported og permission: 'node:collection:create post content'
+  $permissions['node:collection:create post content'] = array(
+    'roles' => array(),
+  );
+
   // Exported og permission: 'node:collection:create subcollection content'
   $permissions['node:collection:create subcollection content'] = array(
     'roles' => array(
@@ -53,6 +58,11 @@ function shanti_collections_og_features_default_permissions() {
       'administrator member' => 'administrator member',
       'editor' => 'editor',
     ),
+  );
+
+  // Exported og permission: 'node:collection:delete any post content'
+  $permissions['node:collection:delete any post content'] = array(
+    'roles' => array(),
   );
 
   // Exported og permission: 'node:collection:delete any subcollection content'
@@ -69,6 +79,11 @@ function shanti_collections_og_features_default_permissions() {
       'editor' => 'editor',
       'member' => 'member',
     ),
+  );
+
+  // Exported og permission: 'node:collection:delete own post content'
+  $permissions['node:collection:delete own post content'] = array(
+    'roles' => array(),
   );
 
   // Exported og permission: 'node:collection:delete own subcollection content'
@@ -115,6 +130,13 @@ function shanti_collections_og_features_default_permissions() {
     ),
   );
 
+  // Exported og permission: 'node:collection:publish any topic_model content'
+  $permissions['node:collection:publish any topic_model content'] = array(
+    'roles' => array(
+      'administrator member' => 'administrator member',
+    ),
+  );
+
   // Exported og permission: 'node:collection:publish editable book content'
   $permissions['node:collection:publish editable book content'] = array(
     'roles' => array(
@@ -131,12 +153,26 @@ function shanti_collections_og_features_default_permissions() {
     ),
   );
 
+  // Exported og permission: 'node:collection:publish editable topic_model content'
+  $permissions['node:collection:publish editable topic_model content'] = array(
+    'roles' => array(
+      'administrator member' => 'administrator member',
+    ),
+  );
+
   // Exported og permission: 'node:collection:publish own book content'
   $permissions['node:collection:publish own book content'] = array(
     'roles' => array(
       'administrator member' => 'administrator member',
       'editor' => 'editor',
       'member' => 'member',
+    ),
+  );
+
+  // Exported og permission: 'node:collection:publish own topic_model content'
+  $permissions['node:collection:publish own topic_model content'] = array(
+    'roles' => array(
+      'administrator member' => 'administrator member',
     ),
   );
 
@@ -168,6 +204,13 @@ function shanti_collections_og_features_default_permissions() {
     ),
   );
 
+  // Exported og permission: 'node:collection:unpublish any topic_model content'
+  $permissions['node:collection:unpublish any topic_model content'] = array(
+    'roles' => array(
+      'administrator member' => 'administrator member',
+    ),
+  );
+
   // Exported og permission: 'node:collection:unpublish editable book content'
   $permissions['node:collection:unpublish editable book content'] = array(
     'roles' => array(
@@ -184,12 +227,26 @@ function shanti_collections_og_features_default_permissions() {
     ),
   );
 
+  // Exported og permission: 'node:collection:unpublish editable topic_model content'
+  $permissions['node:collection:unpublish editable topic_model content'] = array(
+    'roles' => array(
+      'administrator member' => 'administrator member',
+    ),
+  );
+
   // Exported og permission: 'node:collection:unpublish own book content'
   $permissions['node:collection:unpublish own book content'] = array(
     'roles' => array(
       'administrator member' => 'administrator member',
       'editor' => 'editor',
       'member' => 'member',
+    ),
+  );
+
+  // Exported og permission: 'node:collection:unpublish own topic_model content'
+  $permissions['node:collection:unpublish own topic_model content'] = array(
+    'roles' => array(
+      'administrator member' => 'administrator member',
     ),
   );
 
@@ -207,6 +264,11 @@ function shanti_collections_og_features_default_permissions() {
       'administrator member' => 'administrator member',
       'editor' => 'editor',
     ),
+  );
+
+  // Exported og permission: 'node:collection:update any post content'
+  $permissions['node:collection:update any post content'] = array(
+    'roles' => array(),
   );
 
   // Exported og permission: 'node:collection:update any subcollection content'
@@ -232,10 +294,290 @@ function shanti_collections_og_features_default_permissions() {
     ),
   );
 
+  // Exported og permission: 'node:collection:update own post content'
+  $permissions['node:collection:update own post content'] = array(
+    'roles' => array(),
+  );
+
   // Exported og permission: 'node:collection:update own subcollection content'
   $permissions['node:collection:update own subcollection content'] = array(
     'roles' => array(
       'administrator member' => 'administrator member',
+    ),
+  );
+
+  // Exported og permission: 'node:group:add user'
+  $permissions['node:group:add user'] = array(
+    'roles' => array(
+      'administrator member' => 'administrator member',
+    ),
+  );
+
+  // Exported og permission: 'node:group:administer group'
+  $permissions['node:group:administer group'] = array(
+    'roles' => array(
+      'administrator member' => 'administrator member',
+    ),
+  );
+
+  // Exported og permission: 'node:group:approve and deny subscription'
+  $permissions['node:group:approve and deny subscription'] = array(
+    'roles' => array(
+      'administrator member' => 'administrator member',
+    ),
+  );
+
+  // Exported og permission: 'node:group:create book content'
+  $permissions['node:group:create book content'] = array(
+    'roles' => array(
+      'member' => 'member',
+    ),
+  );
+
+  // Exported og permission: 'node:group:create post content'
+  $permissions['node:group:create post content'] = array(
+    'roles' => array(),
+  );
+
+  // Exported og permission: 'node:group:create subcollection content'
+  $permissions['node:group:create subcollection content'] = array(
+    'roles' => array(
+      'member' => 'member',
+    ),
+  );
+
+  // Exported og permission: 'node:group:delete any book content'
+  $permissions['node:group:delete any book content'] = array(
+    'roles' => array(
+      'member' => 'member',
+    ),
+  );
+
+  // Exported og permission: 'node:group:delete any post content'
+  $permissions['node:group:delete any post content'] = array(
+    'roles' => array(),
+  );
+
+  // Exported og permission: 'node:group:delete any subcollection content'
+  $permissions['node:group:delete any subcollection content'] = array(
+    'roles' => array(
+      'member' => 'member',
+    ),
+  );
+
+  // Exported og permission: 'node:group:delete own book content'
+  $permissions['node:group:delete own book content'] = array(
+    'roles' => array(
+      'member' => 'member',
+    ),
+  );
+
+  // Exported og permission: 'node:group:delete own post content'
+  $permissions['node:group:delete own post content'] = array(
+    'roles' => array(),
+  );
+
+  // Exported og permission: 'node:group:delete own subcollection content'
+  $permissions['node:group:delete own subcollection content'] = array(
+    'roles' => array(
+      'member' => 'member',
+    ),
+  );
+
+  // Exported og permission: 'node:group:manage members'
+  $permissions['node:group:manage members'] = array(
+    'roles' => array(
+      'administrator member' => 'administrator member',
+    ),
+  );
+
+  // Exported og permission: 'node:group:manage permissions'
+  $permissions['node:group:manage permissions'] = array(
+    'roles' => array(
+      'administrator member' => 'administrator member',
+    ),
+  );
+
+  // Exported og permission: 'node:group:manage roles'
+  $permissions['node:group:manage roles'] = array(
+    'roles' => array(
+      'administrator member' => 'administrator member',
+    ),
+  );
+
+  // Exported og permission: 'node:group:publish any book content'
+  $permissions['node:group:publish any book content'] = array(
+    'roles' => array(
+      'administrator member' => 'administrator member',
+    ),
+  );
+
+  // Exported og permission: 'node:group:publish any content'
+  $permissions['node:group:publish any content'] = array(
+    'roles' => array(
+      'administrator member' => 'administrator member',
+    ),
+  );
+
+  // Exported og permission: 'node:group:publish any topic_model content'
+  $permissions['node:group:publish any topic_model content'] = array(
+    'roles' => array(
+      'administrator member' => 'administrator member',
+    ),
+  );
+
+  // Exported og permission: 'node:group:publish editable book content'
+  $permissions['node:group:publish editable book content'] = array(
+    'roles' => array(
+      'administrator member' => 'administrator member',
+    ),
+  );
+
+  // Exported og permission: 'node:group:publish editable content'
+  $permissions['node:group:publish editable content'] = array(
+    'roles' => array(
+      'administrator member' => 'administrator member',
+    ),
+  );
+
+  // Exported og permission: 'node:group:publish editable topic_model content'
+  $permissions['node:group:publish editable topic_model content'] = array(
+    'roles' => array(
+      'administrator member' => 'administrator member',
+    ),
+  );
+
+  // Exported og permission: 'node:group:publish own book content'
+  $permissions['node:group:publish own book content'] = array(
+    'roles' => array(
+      'administrator member' => 'administrator member',
+    ),
+  );
+
+  // Exported og permission: 'node:group:publish own topic_model content'
+  $permissions['node:group:publish own topic_model content'] = array(
+    'roles' => array(
+      'administrator member' => 'administrator member',
+    ),
+  );
+
+  // Exported og permission: 'node:group:subscribe'
+  $permissions['node:group:subscribe'] = array(
+    'roles' => array(
+      'non-member' => 'non-member',
+    ),
+  );
+
+  // Exported og permission: 'node:group:subscribe without approval'
+  $permissions['node:group:subscribe without approval'] = array(
+    'roles' => array(),
+  );
+
+  // Exported og permission: 'node:group:unpublish any book content'
+  $permissions['node:group:unpublish any book content'] = array(
+    'roles' => array(
+      'administrator member' => 'administrator member',
+    ),
+  );
+
+  // Exported og permission: 'node:group:unpublish any content'
+  $permissions['node:group:unpublish any content'] = array(
+    'roles' => array(
+      'administrator member' => 'administrator member',
+    ),
+  );
+
+  // Exported og permission: 'node:group:unpublish any topic_model content'
+  $permissions['node:group:unpublish any topic_model content'] = array(
+    'roles' => array(
+      'administrator member' => 'administrator member',
+    ),
+  );
+
+  // Exported og permission: 'node:group:unpublish editable book content'
+  $permissions['node:group:unpublish editable book content'] = array(
+    'roles' => array(
+      'administrator member' => 'administrator member',
+    ),
+  );
+
+  // Exported og permission: 'node:group:unpublish editable content'
+  $permissions['node:group:unpublish editable content'] = array(
+    'roles' => array(
+      'administrator member' => 'administrator member',
+    ),
+  );
+
+  // Exported og permission: 'node:group:unpublish editable topic_model content'
+  $permissions['node:group:unpublish editable topic_model content'] = array(
+    'roles' => array(
+      'administrator member' => 'administrator member',
+    ),
+  );
+
+  // Exported og permission: 'node:group:unpublish own book content'
+  $permissions['node:group:unpublish own book content'] = array(
+    'roles' => array(
+      'administrator member' => 'administrator member',
+    ),
+  );
+
+  // Exported og permission: 'node:group:unpublish own topic_model content'
+  $permissions['node:group:unpublish own topic_model content'] = array(
+    'roles' => array(
+      'administrator member' => 'administrator member',
+    ),
+  );
+
+  // Exported og permission: 'node:group:unsubscribe'
+  $permissions['node:group:unsubscribe'] = array(
+    'roles' => array(
+      'member' => 'member',
+    ),
+  );
+
+  // Exported og permission: 'node:group:update any book content'
+  $permissions['node:group:update any book content'] = array(
+    'roles' => array(
+      'member' => 'member',
+    ),
+  );
+
+  // Exported og permission: 'node:group:update any post content'
+  $permissions['node:group:update any post content'] = array(
+    'roles' => array(),
+  );
+
+  // Exported og permission: 'node:group:update any subcollection content'
+  $permissions['node:group:update any subcollection content'] = array(
+    'roles' => array(
+      'member' => 'member',
+    ),
+  );
+
+  // Exported og permission: 'node:group:update group'
+  $permissions['node:group:update group'] = array(
+    'roles' => array(
+      'administrator member' => 'administrator member',
+    ),
+  );
+
+  // Exported og permission: 'node:group:update own book content'
+  $permissions['node:group:update own book content'] = array(
+    'roles' => array(
+      'member' => 'member',
+    ),
+  );
+
+  // Exported og permission: 'node:group:update own post content'
+  $permissions['node:group:update own post content'] = array(
+    'roles' => array(),
+  );
+
+  // Exported og permission: 'node:group:update own subcollection content'
+  $permissions['node:group:update own subcollection content'] = array(
+    'roles' => array(
+      'member' => 'member',
     ),
   );
 
@@ -269,6 +611,11 @@ function shanti_collections_og_features_default_permissions() {
     ),
   );
 
+  // Exported og permission: 'node:subcollection:create post content'
+  $permissions['node:subcollection:create post content'] = array(
+    'roles' => array(),
+  );
+
   // Exported og permission: 'node:subcollection:create subcollection content'
   $permissions['node:subcollection:create subcollection content'] = array(
     'roles' => array(
@@ -282,6 +629,11 @@ function shanti_collections_og_features_default_permissions() {
       'administrator member' => 'administrator member',
       'editor' => 'editor',
     ),
+  );
+
+  // Exported og permission: 'node:subcollection:delete any post content'
+  $permissions['node:subcollection:delete any post content'] = array(
+    'roles' => array(),
   );
 
   // Exported og permission: 'node:subcollection:delete any subcollection content'
@@ -298,6 +650,11 @@ function shanti_collections_og_features_default_permissions() {
       'editor' => 'editor',
       'member' => 'member',
     ),
+  );
+
+  // Exported og permission: 'node:subcollection:delete own post content'
+  $permissions['node:subcollection:delete own post content'] = array(
+    'roles' => array(),
   );
 
   // Exported og permission: 'node:subcollection:delete own subcollection content'
@@ -344,6 +701,13 @@ function shanti_collections_og_features_default_permissions() {
     ),
   );
 
+  // Exported og permission: 'node:subcollection:publish any topic_model content'
+  $permissions['node:subcollection:publish any topic_model content'] = array(
+    'roles' => array(
+      'administrator member' => 'administrator member',
+    ),
+  );
+
   // Exported og permission: 'node:subcollection:publish editable book content'
   $permissions['node:subcollection:publish editable book content'] = array(
     'roles' => array(
@@ -360,12 +724,26 @@ function shanti_collections_og_features_default_permissions() {
     ),
   );
 
+  // Exported og permission: 'node:subcollection:publish editable topic_model content'
+  $permissions['node:subcollection:publish editable topic_model content'] = array(
+    'roles' => array(
+      'administrator member' => 'administrator member',
+    ),
+  );
+
   // Exported og permission: 'node:subcollection:publish own book content'
   $permissions['node:subcollection:publish own book content'] = array(
     'roles' => array(
       'administrator member' => 'administrator member',
       'editor' => 'editor',
       'member' => 'member',
+    ),
+  );
+
+  // Exported og permission: 'node:subcollection:publish own topic_model content'
+  $permissions['node:subcollection:publish own topic_model content'] = array(
+    'roles' => array(
+      'administrator member' => 'administrator member',
     ),
   );
 
@@ -397,6 +775,13 @@ function shanti_collections_og_features_default_permissions() {
     ),
   );
 
+  // Exported og permission: 'node:subcollection:unpublish any topic_model content'
+  $permissions['node:subcollection:unpublish any topic_model content'] = array(
+    'roles' => array(
+      'administrator member' => 'administrator member',
+    ),
+  );
+
   // Exported og permission: 'node:subcollection:unpublish editable book content'
   $permissions['node:subcollection:unpublish editable book content'] = array(
     'roles' => array(
@@ -413,12 +798,26 @@ function shanti_collections_og_features_default_permissions() {
     ),
   );
 
+  // Exported og permission: 'node:subcollection:unpublish editable topic_model content'
+  $permissions['node:subcollection:unpublish editable topic_model content'] = array(
+    'roles' => array(
+      'administrator member' => 'administrator member',
+    ),
+  );
+
   // Exported og permission: 'node:subcollection:unpublish own book content'
   $permissions['node:subcollection:unpublish own book content'] = array(
     'roles' => array(
       'administrator member' => 'administrator member',
       'editor' => 'editor',
       'member' => 'member',
+    ),
+  );
+
+  // Exported og permission: 'node:subcollection:unpublish own topic_model content'
+  $permissions['node:subcollection:unpublish own topic_model content'] = array(
+    'roles' => array(
+      'administrator member' => 'administrator member',
     ),
   );
 
@@ -436,6 +835,11 @@ function shanti_collections_og_features_default_permissions() {
       'administrator member' => 'administrator member',
       'editor' => 'editor',
     ),
+  );
+
+  // Exported og permission: 'node:subcollection:update any post content'
+  $permissions['node:subcollection:update any post content'] = array(
+    'roles' => array(),
   );
 
   // Exported og permission: 'node:subcollection:update any subcollection content'
@@ -459,6 +863,11 @@ function shanti_collections_og_features_default_permissions() {
       'editor' => 'editor',
       'member' => 'member',
     ),
+  );
+
+  // Exported og permission: 'node:subcollection:update own post content'
+  $permissions['node:subcollection:update own post content'] = array(
+    'roles' => array(),
   );
 
   // Exported og permission: 'node:subcollection:update own subcollection content'

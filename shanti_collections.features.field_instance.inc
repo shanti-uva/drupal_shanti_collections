@@ -20,7 +20,11 @@ function shanti_collections_field_default_field_instances() {
       'default' => array(
         'label' => 'inline',
         'module' => 'text',
-        'settings' => array(),
+        'settings' => array(
+          'quickedit' => array(
+            'editor' => 'plain_text',
+          ),
+        ),
         'type' => 'text_default',
         'weight' => 1,
       ),
@@ -95,6 +99,9 @@ function shanti_collections_field_default_field_instances() {
         'settings' => array(
           'image_link' => '',
           'image_style' => 'medium',
+          'quickedit' => array(
+            'editor' => 'form',
+          ),
         ),
         'type' => 'image',
         'weight' => 0,
@@ -169,7 +176,11 @@ function shanti_collections_field_default_field_instances() {
       'default' => array(
         'label' => 'inline',
         'module' => 'list',
-        'settings' => array(),
+        'settings' => array(
+          'quickedit' => array(
+            'editor' => 'form',
+          ),
+        ),
         'type' => 'list_default',
         'weight' => 3,
       ),
@@ -222,6 +233,9 @@ function shanti_collections_field_default_field_instances() {
         'module' => 'og_ui',
         'settings' => array(
           'field_name' => 0,
+          'quickedit' => array(
+            'editor' => 'form',
+          ),
         ),
         'type' => 'og_group_subscribe',
         'weight' => 2,
@@ -274,7 +288,11 @@ function shanti_collections_field_default_field_instances() {
       'default' => array(
         'label' => 'hidden',
         'module' => 'text',
-        'settings' => array(),
+        'settings' => array(
+          'quickedit' => array(
+            'editor' => 'plain_text',
+          ),
+        ),
         'type' => 'text_default',
         'weight' => 1,
       ),
@@ -317,6 +335,9 @@ function shanti_collections_field_default_field_instances() {
         'settings' => array(
           'image_link' => '',
           'image_style' => 'medium',
+          'quickedit' => array(
+            'editor' => 'form',
+          ),
         ),
         'type' => 'image',
         'weight' => 0,
@@ -391,6 +412,9 @@ function shanti_collections_field_default_field_instances() {
         'module' => 'entityreference',
         'settings' => array(
           'link' => 1,
+          'quickedit' => array(
+            'editor' => 'form',
+          ),
         ),
         'type' => 'entityreference_label',
         'weight' => 2,
@@ -400,6 +424,9 @@ function shanti_collections_field_default_field_instances() {
         'module' => 'entityreference',
         'settings' => array(
           'link' => FALSE,
+          'quickedit' => array(
+            'editor' => 'form',
+          ),
         ),
         'type' => 'entityreference_label',
         'weight' => 1,
@@ -458,7 +485,11 @@ function shanti_collections_field_default_field_instances() {
       'default' => array(
         'label' => 'inline',
         'module' => 'list',
-        'settings' => array(),
+        'settings' => array(
+          'quickedit' => array(
+            'editor' => 'form',
+          ),
+        ),
         'type' => 'list_default',
         'weight' => 3,
       ),
@@ -562,7 +593,11 @@ function shanti_collections_field_default_field_instances() {
       'default' => array(
         'label' => 'above',
         'module' => 'text',
-        'settings' => array(),
+        'settings' => array(
+          'quickedit' => array(
+            'editor' => 'plain_text',
+          ),
+        ),
         'type' => 'text_default',
         'weight' => 0,
       ),
@@ -595,7 +630,11 @@ function shanti_collections_field_default_field_instances() {
       'default' => array(
         'label' => 'above',
         'module' => 'og_ui',
-        'settings' => array(),
+        'settings' => array(
+          'quickedit' => array(
+            'editor' => 'form',
+          ),
+        ),
         'type' => 'og_list_default',
         'weight' => 0,
       ),

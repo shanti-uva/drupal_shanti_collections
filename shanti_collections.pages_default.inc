@@ -17,7 +17,7 @@ function shanti_collections_default_page_manager_handlers() {
   $handler->task = 'node_view';
   $handler->subtask = '';
   $handler->handler = 'panel_context';
-  $handler->weight = 2;
+  $handler->weight = -26;
   $handler->conf = array(
     'title' => 'Collection',
     'no_blocks' => 1,
@@ -62,7 +62,18 @@ function shanti_collections_default_page_manager_handlers() {
     ),
     'panels_css_js_files_css' => '',
     'panels_css_js_files_js' => '',
-    'panels_css_js_code_css' => '.field-name-body {
+    'panels_css_js_code_css' => '#shanti-texts-collection .shanti-collection-body {
+  margin-top: -1rem;
+}
+#shanti-texts-collection .shanti-collection-body .pane-title {
+  margin-bottom: 2rem;
+}
+
+#shanti-collection-featured-image .field-name-field-general-featured-image {
+  margin-right: 1rem;
+}
+
+.field-name-body {
   margin-top: -1rem;
 }
 
@@ -73,6 +84,7 @@ function shanti_collections_default_page_manager_handlers() {
 a.shanti-collections-create-link {
   margin-left: -1rem;
 }
+
 ',
     'panels_css_js_code_js' => '',
     'panels_css_js_code_js_wrapper' => '0',

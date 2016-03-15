@@ -294,6 +294,108 @@ function shanti_collections_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-collection-og_user_inheritance'.
+  $field_instances['node-collection-og_user_inheritance'] = array(
+    'bundle' => 'collection',
+    'default_value' => array(
+      0 => array(
+        'value' => 1,
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 5,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'og_user_inheritance',
+    'label' => 'Group user inheritance',
+    'required' => TRUE,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'view modes' => array(
+      'full' => array(
+        'label' => 'above',
+        'type' => 'options_onoff',
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'type' => 'options_onoff',
+      ),
+    ),
+    'widget' => array(
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_buttons',
+      'weight' => 6,
+    ),
+    'widget_type' => 'options_select',
+  );
+
+  // Exported field_instance: 'node-collection-og_user_permission_inheritance'.
+  $field_instances['node-collection-og_user_permission_inheritance'] = array(
+    'bundle' => 'collection',
+    'default_value' => array(
+      0 => array(
+        'value' => 0,
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 4,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'og_user_permission_inheritance',
+    'label' => 'Group user permission inheritance',
+    'required' => TRUE,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'view modes' => array(
+      'full' => array(
+        'label' => 'above',
+        'type' => 'options_onoff',
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'type' => 'options_onoff',
+      ),
+    ),
+    'widget' => array(
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_buttons',
+      'weight' => 5,
+    ),
+    'widget_type' => 'options_select',
+  );
+
   // Exported field_instance: 'node-subcollection-body'.
   $field_instances['node-subcollection-body'] = array(
     'bundle' => 'subcollection',
@@ -700,6 +802,8 @@ function shanti_collections_field_default_field_instances() {
   t('Featured image');
   t('Group');
   t('Group membership');
+  t('Group user inheritance');
+  t('Group user permission inheritance');
   t('Group visibility');
   t('Overview');
   t('Parent Collection');

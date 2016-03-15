@@ -17,6 +17,7 @@ dependencies[] = node
 dependencies[] = og
 dependencies[] = og_access_roles
 dependencies[] = og_context
+dependencies[] = og_subgroups
 dependencies[] = og_ui
 dependencies[] = options
 dependencies[] = page_manager

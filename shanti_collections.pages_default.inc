@@ -45,7 +45,6 @@ function shanti_collections_default_page_manager_handlers() {
           'settings' => array(
             'type' => array(
               'collection' => 'collection',
-              'subcollection' => 'subcollection',
             ),
           ),
           'context' => 'argument_entity_id:node_1',
@@ -90,7 +89,7 @@ a.shanti-collections-create-link {
     'panels_css_js_code_js_wrapper' => '0',
   );
   $display = new panels_display();
-  $display->layout = 'bootstrap_twocol_stacked';
+  $display->layout = 'bootstrap_threecol_stacked';
   $display->layout_settings = array();
   $display->panel_settings = array(
     'style_settings' => array(
@@ -98,13 +97,13 @@ a.shanti-collections-create-link {
       'top' => NULL,
       'left' => array(
         'column_type' => 'col-sm',
-        'column_size' => '8',
+        'column_size' => '3',
         'offset_type' => 'col-lg-offset',
         'offset_size' => '0',
       ),
       'middle' => array(
         'column_type' => 'col-lg',
-        'column_size' => '4',
+        'column_size' => '5',
         'offset_type' => 'col-lg-offset',
         'offset_size' => '0',
       ),
@@ -203,7 +202,7 @@ a.shanti-collections-create-link {
     $display->panels['left'][0] = 'new-77299824-f4ba-49de-9e84-f217a8627592';
     $pane = new stdClass();
     $pane->pid = 'new-ec3c11e8-72fd-421f-a63d-f1309c982ef8';
-    $pane->panel = 'left';
+    $pane->panel = 'middle';
     $pane->type = 'node_body';
     $pane->subtype = 'node_body';
     $pane->shown = TRUE;
@@ -223,40 +222,11 @@ a.shanti-collections-create-link {
       'css_class' => 'shanti-collection-body',
     );
     $pane->extras = array();
-    $pane->position = 1;
+    $pane->position = 0;
     $pane->locks = array();
     $pane->uuid = 'ec3c11e8-72fd-421f-a63d-f1309c982ef8';
     $display->content['new-ec3c11e8-72fd-421f-a63d-f1309c982ef8'] = $pane;
-    $display->panels['left'][1] = 'new-ec3c11e8-72fd-421f-a63d-f1309c982ef8';
-    $pane = new stdClass();
-    $pane->pid = 'new-041df933-5168-4432-8625-922dbfb4eed9';
-    $pane->panel = 'right';
-    $pane->type = 'node_create_links';
-    $pane->subtype = 'node_create_links';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'types' => array(
-        'subcollection' => 'subcollection',
-      ),
-      'field_name' => 'field_og_parent_collection_ref',
-      'context' => 'argument_entity_id:node_1',
-      'override_title' => 1,
-      'override_title_text' => 'Content Creation',
-      'override_title_heading' => 'h2',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-      'style' => 'naked',
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 0;
-    $pane->locks = array();
-    $pane->uuid = '041df933-5168-4432-8625-922dbfb4eed9';
-    $display->content['new-041df933-5168-4432-8625-922dbfb4eed9'] = $pane;
-    $display->panels['right'][0] = 'new-041df933-5168-4432-8625-922dbfb4eed9';
+    $display->panels['middle'][0] = 'new-ec3c11e8-72fd-421f-a63d-f1309c982ef8';
     $pane = new stdClass();
     $pane->pid = 'new-2612f008-948e-4bf0-b632-4d0ad9aa4f22';
     $pane->panel = 'right';
@@ -281,113 +251,43 @@ a.shanti-collections-create-link {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 1;
+    $pane->position = 0;
     $pane->locks = array();
     $pane->uuid = '2612f008-948e-4bf0-b632-4d0ad9aa4f22';
     $display->content['new-2612f008-948e-4bf0-b632-4d0ad9aa4f22'] = $pane;
-    $display->panels['right'][1] = 'new-2612f008-948e-4bf0-b632-4d0ad9aa4f22';
+    $display->panels['right'][0] = 'new-2612f008-948e-4bf0-b632-4d0ad9aa4f22';
     $pane = new stdClass();
-    $pane->pid = 'new-8295ee45-deed-4a08-ae92-4b01d5a8862b';
+    $pane->pid = 'new-041df933-5168-4432-8625-922dbfb4eed9';
     $pane->panel = 'right';
-    $pane->type = 'custom';
-    $pane->subtype = 'custom';
-    $pane->shown = FALSE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'admin_title' => 'Add New Content',
-      'title' => '',
-      'body' => '<?php 
-$path = explode("/", current_path()); 
-$nid = array_pop($path);
-$node = node_load($nid);
-?>
-
-<?php if (user_access(\'create new books\')): ?>
-<a class="btn btn-primary shanti-collections-create-link" href="/node/add/book?field_og_collection_ref=%node:nid">Create new text</a>
-<?php endif; ?>
-
-<?php if (user_access(\'create subcollection content\') && $node->type == \'collection\'): ?>
-<a class="btn btn-primary shanti-collections-create-link" href="/node/add/subcollection?field_og_parent_collection_ref=%node:nid">Create new Subcollection</a>
-<?php endif; ?>
-',
-      'format' => 'php_code',
-      'substitute' => 1,
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 2;
-    $pane->locks = array();
-    $pane->uuid = '8295ee45-deed-4a08-ae92-4b01d5a8862b';
-    $display->content['new-8295ee45-deed-4a08-ae92-4b01d5a8862b'] = $pane;
-    $display->panels['right'][2] = 'new-8295ee45-deed-4a08-ae92-4b01d5a8862b';
-    $pane = new stdClass();
-    $pane->pid = 'new-92acdfa7-dbee-4f16-acfa-cda83b1dca0f';
-    $pane->panel = 'right';
-    $pane->type = 'entity_field';
-    $pane->subtype = 'node:field_og_parent_collection_ref';
+    $pane->type = 'node_create_links';
+    $pane->subtype = 'node_create_links';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'label' => 'hidden',
-      'formatter' => 'entityreference_label',
-      'delta_limit' => 0,
-      'delta_offset' => '0',
-      'delta_reversed' => FALSE,
-      'formatter_settings' => array(
-        'link' => 1,
+      'types' => array(
+        'subcollection' => 'subcollection',
       ),
+      'field_name' => 'field_og_parent_collection_ref',
       'context' => 'argument_entity_id:node_1',
       'override_title' => 1,
-      'override_title_text' => 'Parent Collection',
-      'override_title_heading' => 'h3',
+      'override_title_text' => 'Content Creation',
+      'override_title_heading' => 'h2',
     );
     $pane->cache = array();
     $pane->style = array(
       'settings' => NULL,
+      'style' => 'default',
     );
-    $pane->css = array();
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => '',
+    );
     $pane->extras = array();
-    $pane->position = 3;
+    $pane->position = 1;
     $pane->locks = array();
-    $pane->uuid = '92acdfa7-dbee-4f16-acfa-cda83b1dca0f';
-    $display->content['new-92acdfa7-dbee-4f16-acfa-cda83b1dca0f'] = $pane;
-    $display->panels['right'][3] = 'new-92acdfa7-dbee-4f16-acfa-cda83b1dca0f';
-    $pane = new stdClass();
-    $pane->pid = 'new-d57fb538-5d88-4154-b4c0-56450f612416';
-    $pane->panel = 'right';
-    $pane->type = 'views_panes';
-    $pane->subtype = 'collection_members-panel_pane_2';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'use_pager' => 1,
-      'pager_id' => '0',
-      'items_per_page' => '5',
-      'fields_override' => array(
-        'name' => 1,
-      ),
-      'context' => array(
-        0 => 'argument_entity_id:node_1',
-      ),
-      'override_title' => 1,
-      'override_title_text' => 'Members',
-      'override_title_heading' => 'h3',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 4;
-    $pane->locks = array();
-    $pane->uuid = 'd57fb538-5d88-4154-b4c0-56450f612416';
-    $display->content['new-d57fb538-5d88-4154-b4c0-56450f612416'] = $pane;
-    $display->panels['right'][4] = 'new-d57fb538-5d88-4154-b4c0-56450f612416';
+    $pane->uuid = '041df933-5168-4432-8625-922dbfb4eed9';
+    $display->content['new-041df933-5168-4432-8625-922dbfb4eed9'] = $pane;
+    $display->panels['right'][1] = 'new-041df933-5168-4432-8625-922dbfb4eed9';
     $pane = new stdClass();
     $pane->pid = 'new-7005d8fc-eac9-44b2-9015-3db2ccd79812';
     $pane->panel = 'right';
@@ -417,11 +317,75 @@ $node = node_load($nid);
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 5;
+    $pane->position = 2;
     $pane->locks = array();
     $pane->uuid = '7005d8fc-eac9-44b2-9015-3db2ccd79812';
     $display->content['new-7005d8fc-eac9-44b2-9015-3db2ccd79812'] = $pane;
-    $display->panels['right'][5] = 'new-7005d8fc-eac9-44b2-9015-3db2ccd79812';
+    $display->panels['right'][2] = 'new-7005d8fc-eac9-44b2-9015-3db2ccd79812';
+    $pane = new stdClass();
+    $pane->pid = 'new-d57fb538-5d88-4154-b4c0-56450f612416';
+    $pane->panel = 'right';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'collection_members-panel_pane_2';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'use_pager' => 1,
+      'pager_id' => '0',
+      'items_per_page' => '5',
+      'fields_override' => array(
+        'name' => 1,
+      ),
+      'context' => array(
+        0 => 'argument_entity_id:node_1',
+      ),
+      'override_title' => 1,
+      'override_title_text' => 'Members',
+      'override_title_heading' => 'h3',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 3;
+    $pane->locks = array();
+    $pane->uuid = 'd57fb538-5d88-4154-b4c0-56450f612416';
+    $display->content['new-d57fb538-5d88-4154-b4c0-56450f612416'] = $pane;
+    $display->panels['right'][3] = 'new-d57fb538-5d88-4154-b4c0-56450f612416';
+    $pane = new stdClass();
+    $pane->pid = 'new-92acdfa7-dbee-4f16-acfa-cda83b1dca0f';
+    $pane->panel = 'right';
+    $pane->type = 'entity_field';
+    $pane->subtype = 'node:field_og_parent_collection_ref';
+    $pane->shown = FALSE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'label' => 'hidden',
+      'formatter' => 'entityreference_label',
+      'delta_limit' => 0,
+      'delta_offset' => '0',
+      'delta_reversed' => FALSE,
+      'formatter_settings' => array(
+        'link' => 1,
+      ),
+      'context' => 'argument_entity_id:node_1',
+      'override_title' => 1,
+      'override_title_text' => 'Parent Collection',
+      'override_title_heading' => 'h3',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 4;
+    $pane->locks = array();
+    $pane->uuid = '92acdfa7-dbee-4f16-acfa-cda83b1dca0f';
+    $display->content['new-92acdfa7-dbee-4f16-acfa-cda83b1dca0f'] = $pane;
+    $display->panels['right'][4] = 'new-92acdfa7-dbee-4f16-acfa-cda83b1dca0f';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;

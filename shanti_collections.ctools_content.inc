@@ -21,6 +21,7 @@ function shanti_collections_default_ctools_custom_content() {
     'admin_title' => '',
     'title' => 'Collection Items',
     'body' => '<?php
+
 $nid =   arg(1);
 $args = array();
 $args[] = $nid;
@@ -29,9 +30,7 @@ $v1->set_display(\'views_data_export_1\');
 $v1->set_arguments(array($nid));
 $v1->pre_execute();
 $v1->execute();
-foreach ($v1->result as $item) {
-  $args[] = $item->nid;
-}
+foreach ($v1->result as $item) { $args[] = $item->nid; }
 $arg_str = implode(",",$args);
 
 // Pass the argument to the texts view

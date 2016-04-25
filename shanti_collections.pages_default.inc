@@ -312,6 +312,38 @@ function shanti_collections_default_page_manager_handlers() {
     $pane->uuid = '03ca1f90-b135-46d0-92bf-a0d5af13ce4d';
     $display->content['new-03ca1f90-b135-46d0-92bf-a0d5af13ce4d'] = $pane;
     $display->panels['right'][2] = 'new-03ca1f90-b135-46d0-92bf-a0d5af13ce4d';
+    $pane = new stdClass();
+    $pane->pid = 'new-5d92aff6-154f-4397-a853-be91bb57793c';
+    $pane->panel = 'right';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'collection_members-panel_pane_2';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'use_pager' => 0,
+      'pager_id' => '0',
+      'items_per_page' => '5',
+      'fields_override' => array(
+        'name' => 1,
+      ),
+      'context' => array(
+        0 => 'relationship_entity_from_field:field_og_parent_collection_ref-node-node_1',
+      ),
+      'override_title' => 1,
+      'override_title_text' => 'Inherited Members',
+      'override_title_heading' => 'h2',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 3;
+    $pane->locks = array();
+    $pane->uuid = '5d92aff6-154f-4397-a853-be91bb57793c';
+    $display->content['new-5d92aff6-154f-4397-a853-be91bb57793c'] = $pane;
+    $display->panels['right'][3] = 'new-5d92aff6-154f-4397-a853-be91bb57793c';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = 'new-6a6f401a-eae8-475a-b6b2-c4ef7aeb55d5';
   $handler->conf['display'] = $display;

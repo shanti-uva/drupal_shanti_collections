@@ -23,7 +23,7 @@ function shanti_collections_default_page_manager_handlers() {
     'no_blocks' => 0,
     'pipeline' => 'standard',
     'body_classes_to_remove' => '',
-    'body_classes_to_add' => '',
+    'body_classes_to_add' => 'shanti-collection-page',
     'css_id' => '',
     'css' => '',
     'contexts' => array(),
@@ -362,18 +362,9 @@ function shanti_collections_default_page_manager_handlers() {
     'no_blocks' => 1,
     'pipeline' => 'standard',
     'body_classes_to_remove' => '',
-    'body_classes_to_add' => '',
+    'body_classes_to_add' => 'shanti-collection-page',
     'css_id' => 'shanti-texts-collection',
-    'css' => '#shanti-texts-collection .shanti-collection-body {
-  margin-top: -1rem;
-}
-#shanti-texts-collection .shanti-collection-body .pane-title {
-  margin-bottom: 2rem;
-}
-
-#shanti-collection-featured-image .field-name-field-general-featured-image {
-  margin-right: 1rem;
-}',
+    'css' => '',
     'contexts' => array(),
     'relationships' => array(),
     'name' => '',

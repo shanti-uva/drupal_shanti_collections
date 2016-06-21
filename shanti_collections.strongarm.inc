@@ -147,9 +147,6 @@ function shanti_collections_strongarm() {
       'revision' => array(
         'custom_settings' => FALSE,
       ),
-      'meta' => array(
-        'custom_settings' => FALSE,
-      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -199,9 +196,6 @@ function shanti_collections_strongarm() {
         'custom_settings' => FALSE,
       ),
       'revision' => array(
-        'custom_settings' => FALSE,
-      ),
-      'meta' => array(
         'custom_settings' => FALSE,
       ),
     ),
